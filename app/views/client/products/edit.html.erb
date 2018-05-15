@@ -1,0 +1,22 @@
+<%= form_tag "/client/recipes/#{ @recipe['id']}" method: :patch do %>
+ <div>
+    Name: <input type="text" name="name">
+  </div>
+  <div>
+    Price: <input type="text" name="price">
+  </div>
+  <div>
+    Description: <input type="text" name="description">
+  </div>
+  <div>
+    Imague_url: <input type="text" name="image_url">
+  </div>
+  <div>
+    Attack_bonus: <input type="text" name="attack_bonus">
+  </div>
+  <div>
+    Str_bonus: <input type="text" name="str_bonus">
+  </div>
+  <input type="submit" value="Create Product">
+</form>
+<% end %>
