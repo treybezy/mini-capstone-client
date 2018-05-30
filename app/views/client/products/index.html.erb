@@ -1,0 +1,28 @@
+<ul>
+  <li>
+    Sort By
+    <ul>
+      <li><a href="/client/products?sort_by=price">Price</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+<%= form_tag "/client/products", method: :get do %>
+  <input type= "text" name= "search" placeholder= "Search Term">
+  <input type= "submit" value= "Search">
+<% end %>
+
+
+<% @products.each do |product| %>
+
+  <h2> <a href="/client/products/<%= product[:id] %>"></a>  </h2>
+
+  <% if product["discounted"] %>
+      <h3>Discount Item!</h3>
+  <% else %>
+      <h3>Everyday Value!</h3>
+  <% end %>
+
+  <h3><%= product %></h3>
+<% end %> 

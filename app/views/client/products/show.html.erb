@@ -1,5 +1,9 @@
 <h2><%= @products["name"] %></h2>
-<h3>descri <% @product["description"] %></h3>
+<h3>description: <% @product["formatted"]["description"] %></h3>
+h4
 <h4>attack_bonus: <% @product["attack_bonus"] %></h4>
 <h4>str_bonus: <%= @product["str_bonus"] %></h4>
+<h4>Tax: <% @product["formatted"]["tax"] %></h4>
+<h4>total: <% @product["formatted"]["total"] %></h4>
 <a href='/client/rproduct'>Home</a>
+<h4>Supplier: <% @product ["supplier"]["name"] %></h4>

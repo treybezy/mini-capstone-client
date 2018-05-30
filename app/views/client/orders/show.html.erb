@@ -1,0 +1,22 @@
+<h1>Orders Show</h1>
+<h2>Customer #: <%  @order['user_id']</h2>
+
+<h2>Product Name: <%= @order['product']['name'] %></h2>
+<h2>Price: <% @order['product']['']['price'] %></h2>
+<h2>Quantity: <% @order['quantity'] %></h2>
+
+<%= form tag "client/orders", method: :post do %>
+<div>
+
+  Product ID: <input type="text" name="product_id">
+</div>
+<div>
+  Quantity: <input type="text" name="quantity">
+</div>
+<input type="submit" value="Create Order">
+
+<h2>subtotal: <%= @order['subtotal']</h2>
+
+<h2>tax: <%= @order['tax']</h2>
+
+<h2>total: <%= @order['total']</h2>
