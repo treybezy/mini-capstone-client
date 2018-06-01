@@ -4,10 +4,6 @@ class Api::OrdersController < ApplicationController
     response = Unirest.get("http://localhost:3000/api/orders/#{order_id}")
       @order = response.body
       render 'show.html.erb'
-
-  def new
-
-    render 'new.html.erb'
   end
 
   def create
@@ -26,6 +22,11 @@ class Api::OrdersController < ApplicationController
     redirect_to "/client/orders/#{ order['id'] }"
   end
 
+  def index
+    
+
+
+    redirect_to 
   end
 
 
